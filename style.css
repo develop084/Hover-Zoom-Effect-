@@ -1,25 +1,22 @@
-html, body {
-  height: 100%;
-  width: 100%;
-}
 
 #container{
-   display: inline-block; 
-   margin: 20px;
+    margin: 20px;
    border-radius: 30px;
    overflow:hidden;
-   padding:0 0 0 0;
+  
   position:relative;
+
 
 }
 
 #container img{
   padding:0;
-  object-fit: fill;
+  object-fit: cover;
   width: 500px;
   transition: transform .4s;
   filter:brightness(50%);
   cursor:pointer;
+ 
 }
 
 #container:hover img {
@@ -33,7 +30,7 @@ html, body {
 .title{
   color: white;
   font-size: 2rem;
-  position: absolute;
+  position: absolute; position:relative;
   top:0;
   margin: 50% 40%;
   display:none;
@@ -41,10 +38,48 @@ html, body {
 }
 
 #container:hover .title{
-  display: block;
+  display: inline;
   transition: ease-in-out .5s;
 }
-.main{
-  display: flex;
-  align-items: center;
+
+
+.main {
+  display: grid ; 
+  grid-template-columns: 1fr 1fr 1fr;
+   margin: 20px;
+   border-radius: 30px;
+   overflow:hidden;
+   position:relative;
+}
+
+@media (max-width: 670px){
+  .main{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .title{
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  top:0;
+  margin: 110% 35%;
+  display:none;
+  
+}
+}
+
+@media (max-width: 600px){
+  .main{
+    grid-template-columns: 1fr;
+  }
+    .title{
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  top:0;
+  margin: 5% 35%;
+  display:none;
+  z-index:999;
+  
+}
 }
