@@ -32,7 +32,7 @@ html, body {
 
 .title{
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: absolute;
   top:0;
   margin: 50% 40%;
@@ -43,4 +43,8 @@ html, body {
 #container:hover .title{
   display: block;
   transition: ease-in-out .5s;
+}
+.main{
+  display: flex;
+  align-items: center;
 }
